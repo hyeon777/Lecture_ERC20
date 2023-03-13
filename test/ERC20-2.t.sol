@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "../lib/forge-std/src/Test.sol";
 import "../src/ERC20.sol";
 
-contract ERC20_Test2 is ERC20, Test {
+contract ERC20_Test2 is ERC20("DREAM","DRM",28), Test {
     ERC20 drm_token;
     address internal constant alice = address(1);
     address internal constant bob = address(2);
@@ -71,4 +71,5 @@ contract ERC20_Test2 is ERC20, Test {
         _mint(alice, 10 ether);
         _burn(alice, 100 ether);
     }
+
 }

@@ -11,7 +11,7 @@ contract ERC20_Test1 is Test {
     address internal constant bob = address(2);
 
     function setUp() public {
-        drm_token = new ERC20();
+        drm_token = new ERC20("DREAM", "DRM", 18);
     }
     
     function testName() public {

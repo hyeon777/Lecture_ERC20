@@ -95,9 +95,11 @@ contract ERC20 {
         emit Transfer(_owner, address(0), _value);
     }
 
-    constructor(string memory name, string memory symbol, uint8 decimals) public{
-        _name = name;
-        _symbol = symbol;
-        _decimals = decimals;
+    constructor() public{
+        balances[msg.sender] = 100 ether;
+        _totalSupply = 100 ether;
+        _name = "DREAM";
+        _symbol = "DRM";
+        _decimals = 18;
     }
 }
